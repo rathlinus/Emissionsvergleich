@@ -1,2 +1,2 @@
 # Emissionsvergleich
-![grafik](https://github.com/rathlinus/Emissionsvergleich/assets/139418639/af8129c2-b220-4a95-962b-67ffd4e6e969)
+![grafik](https://github.com/rathlinus/Emissionsvergleich/assets/139418639/9763009c-3788-4793-963c-bbbdb34ecc93)
