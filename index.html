@@ -4,6 +4,7 @@
       <meta charset="UTF-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta property="og:image" content="https://tools.linusrath.de/projekttag/vergleich/preview.png" />
       <title>CO2 Fußabdruck</title>
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
       <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
@@ -12,6 +13,20 @@
       <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
       <style>
+         @media (max-width: 999px) {
+         .container {
+         flex-direction: column;
+         }
+         .controls, .chart-container {
+         width: 100% !important;
+         }
+         #chart {
+         height: 500px !important;
+         }
+         .controls {
+         margin-bottom: 20px;
+         }
+         }
          body {
          font-family: 'Arial', sans-serif;
          background-color: #121212;
@@ -353,10 +368,10 @@
                      scales: {
                          x: {
                              grid: {
-                   color: '#1e1e1e', // Color of grid lines
+                   color: '#1e1e1e',
                  },
                  ticks: {
-                   color: '#fff', // Color of axis labels
+                   color: '#fff',
                  },
                          title: {
                              display: true,
@@ -366,10 +381,10 @@
                          },
                          y: {
                              grid: {
-                   color: '#1e1e1e', // Color of grid lines
+                   color: '#1e1e1e',
                  },
                  ticks: {
-                   color: '#fff', // Color of axis labels
+                   color: '#fff',
                  },
                          min: 0,
                          title: {
@@ -399,7 +414,7 @@
            $('#fuelConsumptionSlider').slider('value', values.fuelConsumption);
          
          
-           $('#electricityConsumptionValue').val(values.fuelConsumption)
+           $('#electricityConsumptionValue').val(values.electricityConsumption)
            $('#electricityConsumptionSlider').slider('value', values.electricityConsumption);
          
            $('.car-type').removeClass('selected');
